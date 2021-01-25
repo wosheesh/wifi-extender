@@ -112,7 +112,7 @@ def extract_schemes(interfaces, scheme_class=SchemeWPA):
         match = scheme_re.match(line)
         if match:
             options = {}
-            interface="wlan1"
+            interface="wlan0"
             ssid=None
 
             while lines and lines[0].startswith(' '):

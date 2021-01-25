@@ -13,7 +13,7 @@ def landing():
 def repeaterConf():    
     ssid = request.form['ssid']
     password = request.form['pass']
-    scheme = connect.SchemeWPA('wlan1', ssid, {"ssid": ssid,"psk": password})
+    scheme = connect.SchemeWPA('wlan0', ssid, {"ssid": ssid,"psk": password})
     scheme.save()
     
     subprocess.Popen(['shutdown','-r','now'])
